@@ -38,7 +38,7 @@ new Vue({
       return (Math.floor((this.completed.length / this.todoList.length) * 100)) + "%";
     },
     today: function() {
-      var weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var weekday = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
       var today = new Date();
       var dd = today.getDate();
       var mm = today.getMonth()+1; //January is 0!
