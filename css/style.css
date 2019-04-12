@@ -1,13 +1,15 @@
+/* fonts  */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 *{
   box-sizing: border-box;
 }
 
 body{
   font-size: 15px;
-  font-family: 'Open Sans', sans-serif;
-  color: #444;
-  background-color: #fefefe;
-  background-image: linear-gradient(#fc6c48 0%, #ef5081 100%);
+  font-family: Lato, sans-serif;
+  color: #7B68EE;
+  background-color: #7B68EE;
+  background-image: linear-gradient(#7B68EE 0%, #ef5081 100%);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 20px;
@@ -33,8 +35,9 @@ body{
 
 .todo-title{
   font-size: 1.2em;
-  color: #f65c65;
+  color: #7B68EE;
   font-weight: normal;
+
 }
 
 form{
@@ -70,7 +73,7 @@ input:focus{
 
 input::placeholder{
   color: rgba(0,0,0,0.3);
-  font-style: italic;
+  font-style: Lato;
 }
 
 .btn{
@@ -83,7 +86,7 @@ input::placeholder{
 
 .btn-add {
   background: #ddd;
-  color: #fefefe;
+  color:#FFFFFF;
   border-color: #ddd;
   min-width: 17%;
   pointer-events: none;
@@ -95,14 +98,14 @@ input::placeholder{
 }
 
 .btn-add.active{
-  background: #6664ff;
-  border-color: #6664ff;
+  background: #ef5081;
+  border-color:  #7B68EE;
   pointer-events: visible;
 }
 
 .btn-add.active:hover{
-  background: #4442f6;
-  border-color: #4442f6;
+  background: #7B68EE;
+  border-color:  #ef5081;
 }
 
 .btn-add:active{
@@ -191,7 +194,7 @@ ul.todo-list li .delete:after{
   height: 16px;
   top: 50%;
   left: 50%;
-  background-image: url('https://nourabusoud.github.io/vue-todo-list/images/trash.svg');
+  background-image: url('../img/empty.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -266,7 +269,7 @@ ul.todo-list li:hover .delete:after{
   transform-origin: left center;
 }
 
-/* .todo-item-leave-active below version 2.1.8 */
+
 .todo-item-enter, .todo-item-leave-to {
   opacity: 0;
   transform: translateX(100%);
@@ -276,7 +279,7 @@ ul.todo-list li:hover .delete:after{
 .slide-fade-enter-active, .slide-fade-leave-active {
   transition: all 0.3s ease;
 }
-/* .slide-fade-leave-active below version 2.1.8 */
+
 .slide-fade-enter, .slide-fade-leave-to {
   transform: scale(1.1);
   opacity: 0;
