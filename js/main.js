@@ -41,7 +41,7 @@ new Vue({
       var weekday = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
       var today = new Date();
       var dd = today.getDate();
-      var mm = today.getMonth()+1; //January is 0!
+      var mm = today.getMonth()+1; 
       var yyyy = today.getFullYear();
 
       if (dd < 10) {
@@ -61,15 +61,12 @@ new Vue({
     }
   },
   methods: {
-    // get all todos when loading the page
     getTodos() {
       if (localStorage.getItem('todo_list')) {
         this.todoList = JSON.parse(localStorage.getItem('todo_list'));
       }
     },
-    // add a new item
     addItem() {
-      // validation check
       if (this.new_todo) {
         this.todoList.unshift({
           id: this.todoList.length,
@@ -77,9 +74,7 @@ new Vue({
           done: false,
         });
       }
-      // reset new_todo
       this.new_todo = '';
-      // save the new item in localstorage
       return true;
     },
     deleteItem(item) {
